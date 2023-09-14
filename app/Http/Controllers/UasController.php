@@ -66,7 +66,7 @@ class UasController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($npm)
     {
         //
     }
@@ -91,7 +91,7 @@ class UasController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $npm)
     {
 
         $request->validate([
@@ -99,7 +99,7 @@ class UasController extends Controller
             'alamat' => 'required',
         ]);
 
-        $uas = Uas::find($id);
+        $uas = Uas::find($npm);
         $uas->npm = $request->npm;
         $uas->nama = $request->nama;
         $uas->alamat = $request->alamat;
@@ -122,9 +122,9 @@ class UasController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($npm)
     {
-        $uas = Uas::find($id);
+        $uas = Uas::find($npm);
         $hapus= $uas ->delete();
 
 
