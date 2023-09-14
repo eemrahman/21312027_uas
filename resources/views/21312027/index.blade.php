@@ -19,7 +19,7 @@
 @endpush
 
 	@section('content') 
-    <a class="btn btn-secondary mb-3" href="/21312027">Data Mahasiswa</a>
+    <a class="btn btn-secondary mb-3" href="/21312027/create">Data Mahasiswa</a>
     <table class="table" id="example1">
     <thead class="thead-dark">
         <tr>

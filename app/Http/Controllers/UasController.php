@@ -43,8 +43,9 @@ class UasController extends Controller
             'alamat' => 'required',
         ]);
 
+        $uas->npm = $request->npm;
         $uas->nama = $request->nama;
-        $uas->umur = $request->alamat;
+        $uas->alamat = $request->alamat;
 
         $simpan = $uas->save();
 
@@ -99,6 +100,7 @@ class UasController extends Controller
         ]);
 
         $uas = Uas::find($id);
+        $uas->npm = $request->npm;
         $uas->nama = $request->nama;
         $uas->alamat = $request->alamat;
 
