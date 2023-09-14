@@ -77,9 +77,9 @@ class UasController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($npm)
     {
-        $uas = Uas::where('id',$id)->first();
+        $uas = Uas::where('npm',$npm)->first();
 
         return view('21312027.edit', compact('uas'));
     }
